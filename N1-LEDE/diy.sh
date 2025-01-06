@@ -36,8 +36,24 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
 
+# 替换luci-app-openvpn-server imm源的启动不了服务！
+#rm -rf feeds/luci/applications/luci-app-openvpn-server
+#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openvpn-server
+# 调整 openvpn-server 到 VPN 菜单
+#sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/controller/*.lua
+#sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/model/cbi/openvpn-server/*.lua
+#sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/view/openvpn/*.htm
+# 调整 ssr-plus 到 VPN 菜单
+#sed -i 's/services/vpn/g' package/luci-app-ssr-plus/luasrc/controller/*.lua
+#sed -i 's/services/vpn/g' package/luci-app-ssr-plus/luasrc/model/cbi/openvpn-server/*.lua
+#sed -i 's/services/vpn/g' package/luci-app-ssr-plus/luasrc/view/ShadowSocksR Plus/*.htm
+# 调整 passwall 到 VPN 菜单
+#sed -i 's/services/vpn/g' package/luci-app-passwall/luasrc/controller/*.lua
+#sed -i 's/services/vpn/g' package/luci-app-passwall/luasrc/model/cbi/openvpn-server/*.lua
+#sed -i 's/services/vpn/g' package/luci-app-passwall/luasrc/view/Passwall/*.htm
+
 # Default IP
-sed -i 's/192.168.1.1/192.168.2.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.31.1/192.168.31.2/g' package/base-files/files/bin/config_generate
 
 #修改默认时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
