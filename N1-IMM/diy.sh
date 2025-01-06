@@ -40,11 +40,11 @@ rm -rf feeds/luci/applications/luci-app-argon-config
 #sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/controller/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/model/cbi/openvpn-server/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/view/openvpn/*.htm
-# 调整 app-ssr-plus 到 VPN 菜单
+# 调整 ssr-plus 到 VPN 菜单
 #sed -i 's/services/vpn/g' package/luci-app-ssr-plus/luasrc/controller/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-ssr-plus/luasrc/model/cbi/openvpn-server/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-ssr-plus/luasrc/view/ShadowSocksR Plus/*.htm
-# 调整 app-ssr-plus 到 VPN 菜单
+# 调整 passwall 到 VPN 菜单
 #sed -i 's/services/vpn/g' package/luci-app-passwall/luasrc/controller/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-passwall/luasrc/model/cbi/openvpn-server/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-passwall/luasrc/view/Passwall/*.htm
