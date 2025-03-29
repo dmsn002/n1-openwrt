@@ -23,21 +23,23 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 #添加自定义的软件包源
-#ddns-go
+#ddns-go域名解析
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages ddns-go
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-ddns-go
-#openclsh
+#openclshVPN小猫
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openclash
-#aria2
+#aria2下载器
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages aria2
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-aria2
-#docker
+#docker容器
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages dockerd
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-docker
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-dockerman
-#FTP
+#FTP服务
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages vsftpd
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vsftpd
+#广告屏蔽插件adguardhome
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-adguardhome
 
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
